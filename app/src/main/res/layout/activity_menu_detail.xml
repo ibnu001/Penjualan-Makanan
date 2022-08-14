@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkGrey"
+    tools:context=".MenuDetailActivity">
+
+    <TextView
+        android:id="@+id/tv_menu_detail_kategori"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/bg_corner"
+        android:paddingTop="1dp"
+        android:paddingBottom="3dp"
+        android:text="Kategori"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_menu_detail_kategori">
+
+        <ImageView
+            android:id="@+id/iv_menu_detail_gambar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="7dp"
+            app:srcCompat="@drawable/bg_corner" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_menu_detail_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Nama Menu"
+        android:textColor="@color/darkBlue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/materialCardView"
+        app:layout_constraintStart_toStartOf="@+id/materialCardView"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+    <TextView
+        android:id="@+id/tv_menu_detail_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Harga Menu"
+        android:textColor="@color/darkBlue"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_menu_detail_nama"
+        app:layout_constraintStart_toStartOf="@+id/tv_menu_detail_nama"
+        app:layout_constraintTop_toBottomOf="@+id/tv_menu_detail_nama" />
+
+    <TextView
+        android:id="@+id/tv_menu_detail_deskripsi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="Deskripsi Menu"
+        android:textColor="@color/darkBlue"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_menu_detail_kurang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_menu_detail_harga" />
+
+    <Button
+        android:id="@+id/bt_menu_detail_kurang"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bt_menu_detail_tambah"
+        app:layout_constraintStart_toStartOf="@+id/bt_menu_detail_pesan" />
+
+    <Button
+        android:id="@+id/bt_menu_detail_tambah"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="+"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_menu_detail_totalHarga"
+        app:layout_constraintEnd_toEndOf="@+id/bt_menu_detail_pesan" />
+
+    <TextView
+        android:id="@+id/tv_menu_detail_jumlah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/darkBlue"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_menu_detail_tambah"
+        app:layout_constraintEnd_toStartOf="@+id/bt_menu_detail_tambah"
+        app:layout_constraintStart_toEndOf="@+id/bt_menu_detail_kurang"
+        app:layout_constraintTop_toTopOf="@+id/bt_menu_detail_kurang" />
+
+    <TextView
+        android:id="@+id/tv_menu_detail_totalHarga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/darkBlue"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/bt_menu_detail_pesan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_menu_detail_pesan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="Pesan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
